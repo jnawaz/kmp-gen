@@ -4,6 +4,12 @@
 
 ---
 
+## Inspiration
+
+If you've ever used the [NestJS CLI](https://docs.nestjs.com/cli/overview), you'll know how powerful `nest generate module auth` feels — one command, consistent structure, zero decisions. That same developer experience doesn't exist for Kotlin Multiplatform. `kmp-gen` is the answer to that.
+
+---
+
 ## The problem
 
 Starting a new feature in a Kotlin Multiplatform project means creating the same folder structure every time — domain models, repositories, use cases, data sources, ViewModels, Compose screens. It's repetitive, easy to get inconsistent, and adds friction every time a new feature needs to exist.
