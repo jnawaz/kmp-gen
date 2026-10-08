@@ -10,11 +10,12 @@ type FileSpec struct {
 	OutputPath   string
 }
 
-func dddFiles(sourceRoot, featureName, packageName string) []FileSpec {
-	base := filepath.Join(sourceRoot, "feature", featureName)
-	pkg := packageName + ".feature." + featureName
+func packageToPath(packageName string) string {
+	return strings.ReplaceAll(packageName, ".", "/")
+}
 
-	_ = pkg // used in templates, not here
+func dddFiles(sourceRoot, featureName, packageName string) []FileSpec {
+	base := filepath.Join(sourceRoot, packageToPath(packageName), "feature", featureName)
 
 	return []FileSpec{
 		{
